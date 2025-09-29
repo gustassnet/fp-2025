@@ -8,9 +8,16 @@ data Dumpable = Examples
 -- This is a "root" ADT representing your grammar,
 -- Please expand this ADT as needed
 data Command = Dump Dumpable
+    | ShowBalance
+    | Deposit Int
+    | Withdraw Int
+    | Breakdown Int
   deriving Show
 
 examples :: [Command]
-examples = [
-    Dump Examples
-    ]
+examples =
+  [ ShowBalance
+  , Deposit 250
+  , Withdraw 115
+  , Breakdown 115
+  ]
